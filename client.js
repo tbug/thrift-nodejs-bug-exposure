@@ -40,7 +40,8 @@ setInterval(function () {
 
 }, 2200)
 
+var crashIdx = 0;
 setInterval(function () {
   console.log("client: sending crash")
-  client.crash(function (err) {})
+  client.crash(crashIdx++, function (err) {})
 }, 5000)
